@@ -14,10 +14,10 @@ class Player:
         print(f'Имя:{self.name}, Id:{self.chat_id}, Gender:{self.gender}')
 
     def set_gender(self, new_gender):
-        if new_gender.lower() == 'boy':
-            self.gender = 'boy'
-        elif new_gender.lower() == 'women':
-            self.gender = 'women'
+        if new_gender.lower() == 'мужской':
+            self.gender = 'Мужской'
+        elif new_gender.lower() == 'женский':
+            self.gender = 'Женский'
 
 
 class Location:
@@ -52,7 +52,6 @@ class Game:
         self.player.quantity_location += 1
         self.player.location = self.locations[
             self.player.location.available_actions[action]]
-        pass
 
 
 def parse_json(filename, process_str):
